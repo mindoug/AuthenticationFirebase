@@ -2,18 +2,25 @@
 //  AppDelegate.swift
 //  AuthenticationFirebase
 //
-//  Created by Mindy Douglas on 2/24/23.
+//  Created by Daesy & Mindy on 2/24/23.
 //
+// add import statements
+// add configure function to didFinishLaunchingWithOptions 
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
