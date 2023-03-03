@@ -32,10 +32,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func resetFields() {
-        firstNameTextField.text = ""
-        lastNameTextField.text = ""
-        emailTextField.text = ""
+    func resetPasswordFields() {
         passwordTextField.text = ""
         retypePasswordTextField.text = ""
     }
@@ -43,8 +40,6 @@ class RegisterViewController: UIViewController {
     func checkForEmptyFields() -> Bool {
         if emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             retypePasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            messageLabel.text = "All fields must be filled in."
-            resetFields()
             return true
         } else {
             return false
@@ -56,8 +51,6 @@ class RegisterViewController: UIViewController {
         let retypePassword = retypePasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if password != retypePassword {
-            messageLabel.text = "Passwords do not match."
-            resetFields()
            return true
         } else {
             return false
@@ -67,8 +60,6 @@ class RegisterViewController: UIViewController {
     func checkPasswordLength() -> Bool {
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if password.count < 6 {
-            messageLabel.text = "Password must have at least 6 characters."
-            resetFields()
             return true
         } else {
             return false
@@ -76,13 +67,25 @@ class RegisterViewController: UIViewController {
     }
     
     func validateFields() -> Bool {
+        
         let fieldStatus = checkForEmptyFields()
         let passwordStatus = checkForMismatchedPasswords()
         let passwordCount = checkPasswordLength()
-        if fieldStatus == true && passwordStatus == true && passwordCount == true {
+        
+        if fieldStatus {
+            messageLabel.text = "All fields must be filled in."
             return false
+        } else if passwordCount {
+            messageLabel.text = "Passwords must have at least 6 characters."
+            resetPasswordFields()
+            return false
+        } else if passwordStatus {
+            messageLabel.text = "Passords do not match."
+            resetPasswordFields()
+            return false
+        } else {
+            return true
         }
-        return true
     }
         
     func registerUser() {
@@ -107,4 +110,8 @@ class RegisterViewController: UIViewController {
             registerUser()
             }
         }
+    
+    @IBAction func returnToSignIn(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }

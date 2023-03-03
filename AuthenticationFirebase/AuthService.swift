@@ -35,8 +35,8 @@ class AuthService {
                 completion(false, error)
                 return
             }
-            // if no errors we grab result user
-            
+//            // if no errors we grab result user
+//
 //            guard let resultUser = result?.user else {
 //                    completion(false, nil)
 //                    return
@@ -58,10 +58,10 @@ class AuthService {
 //                    completion(false, error)
 //                    return
 //                }
-                    // if no errors completion true for registerUser boolean, nil for no errors
+//  if no errors completion true for registerUser boolean, nil for no errors
                     completion(true, nil)
-//            }
-        }
+            }
+        //}
     }
     
     public func signIn(with userRequest: LoginUserRequest, completion: @escaping(Error?) -> Void) {
