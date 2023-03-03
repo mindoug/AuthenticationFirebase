@@ -72,14 +72,14 @@ class AuthService {
         }
     }
     
-//    public func signOut(completion: @escaping (Error?) -> Void) {
-//        do {
-//            try Auth.auth().signOut()
-//            completion(nil)
-//            print("Sign out successful.")
-//        } catch let signOutError as NSError {
-//              completion(signOutError)
-//            print("Error signing out: %@", signOutError)
-//        }
-//    }
+    public func signOut(completion: @escaping (Error?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(nil)
+            print("Sign out successful.")
+        } catch let signOutError as NSError {
+              completion(signOutError)
+            print("Error signing out: %@", signOutError)
+        }
+    }
 }

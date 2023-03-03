@@ -18,13 +18,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signOutButtonPressed(_ sender: UIButton) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            print("Sign out successful.")
-            self.performSegue(withIdentifier: "signedout", sender: self)
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
+        AuthService.shared.signOut { [weak self] error in
+            guard let self = self else { return }
+            if error == nil {
+                self.performSegue(withIdentifier: "signedout", sender: self)
+            }
         }
     }
 }

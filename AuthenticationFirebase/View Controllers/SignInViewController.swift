@@ -16,6 +16,7 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class SignInViewController: UIViewController {
     func initialize() {
         navigationController?.navigationBar.tintColor = UIColor(named: "medblue")
     }
+    
+    // uses the AuthService to process the request
     
     func checkAuth(email: String, password: String) {
        let signInRequest = SignInUserRequest(email: email, password: password)
@@ -38,17 +41,24 @@ class SignInViewController: UIViewController {
         }
     }
     
-    func validateFields() -> String? {
+    // if spaces are empty
+    
+    func validateFields() -> Bool {
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            return "Please fill in all fields."
+            return false
+            messageLabel.text = "All fields need to be filled in."
         }
-        return nil
+        return true
     }
 
 
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        checkAuth(email: email, password: password)
+        
+        let validated = validateFields()
+        if validated {
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            checkAuth(email: email, password: password)
+        }
     }
 }
