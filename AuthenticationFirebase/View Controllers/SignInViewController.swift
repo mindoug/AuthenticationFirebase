@@ -27,7 +27,7 @@ class SignInViewController: UIViewController {
     }
     
     func checkAuth(email: String, password: String) {
-       let signInRequest = LoginUserRequest(email: email, password: password)
+       let signInRequest = SignInUserRequest(email: email, password: password)
         AuthService.shared.signIn(with: signInRequest) {
             signInError in
             if let error = signInError {

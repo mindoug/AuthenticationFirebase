@@ -22,7 +22,7 @@
 		72AD8FA929A91B2A00C2EB21 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD8FA829A91B2A00C2EB21 /* RegisterViewController.swift */; };
 		72AD8FAB29A91B3F00C2EB21 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD8FAA29A91B3F00C2EB21 /* ForgotPasswordViewController.swift */; };
 		72B58B9829B13DF9003D7EEA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B58B9729B13DF9003D7EEA /* HomeViewController.swift */; };
-		72D6459229B16C7E00BD121A /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D6459129B16C7E00BD121A /* LoginUserRequest.swift */; };
+		72D6459229B16C7E00BD121A /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D6459129B16C7E00BD121A /* SignInUserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		72AD8FA829A91B2A00C2EB21 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		72AD8FAA29A91B3F00C2EB21 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		72B58B9729B13DF9003D7EEA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		72D6459129B16C7E00BD121A /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		72D6459129B16C7E00BD121A /* SignInUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		728265B929B147400067BD1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				72D6459129B16C7E00BD121A /* LoginUserRequest.swift */,
+				72D6459129B16C7E00BD121A /* SignInUserRequest.swift */,
 				728265B729B1466A0067BD1F /* RegisterUserRequest.swift */,
 			);
 			path = Models;
@@ -204,7 +204,7 @@
 				72AD8FAB29A91B3F00C2EB21 /* ForgotPasswordViewController.swift in Sources */,
 				72AD8F8C29A913AE00C2EB21 /* AppDelegate.swift in Sources */,
 				72AD8FA729A91B1900C2EB21 /* SignInViewController.swift in Sources */,
-				72D6459229B16C7E00BD121A /* LoginUserRequest.swift in Sources */,
+				72D6459229B16C7E00BD121A /* SignInUserRequest.swift in Sources */,
 				72AD8F8E29A913AE00C2EB21 /* SceneDelegate.swift in Sources */,
 				72B58B9829B13DF9003D7EEA /* HomeViewController.swift in Sources */,
 				728265B629B145840067BD1F /* AuthService.swift in Sources */,
