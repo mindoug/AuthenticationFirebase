@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		725A0C9E29B130E90047484A /* ColorSet.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725A0C9D29B130E90047484A /* ColorSet.xcassets */; };
+		728265B629B145840067BD1F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728265B529B145840067BD1F /* AuthService.swift */; };
+		728265B829B1466A0067BD1F /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728265B729B1466A0067BD1F /* RegisterUserRequest.swift */; };
 		72AD8F8C29A913AE00C2EB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD8F8B29A913AE00C2EB21 /* AppDelegate.swift */; };
 		72AD8F8E29A913AE00C2EB21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD8F8D29A913AE00C2EB21 /* SceneDelegate.swift */; };
 		72AD8F9329A913AE00C2EB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AD8F9129A913AE00C2EB21 /* Main.storyboard */; };
@@ -20,10 +22,13 @@
 		72AD8FA929A91B2A00C2EB21 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD8FA829A91B2A00C2EB21 /* RegisterViewController.swift */; };
 		72AD8FAB29A91B3F00C2EB21 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD8FAA29A91B3F00C2EB21 /* ForgotPasswordViewController.swift */; };
 		72B58B9829B13DF9003D7EEA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B58B9729B13DF9003D7EEA /* HomeViewController.swift */; };
+		72D6459229B16C7E00BD121A /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D6459129B16C7E00BD121A /* LoginUserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		725A0C9D29B130E90047484A /* ColorSet.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorSet.xcassets; sourceTree = "<group>"; };
+		728265B529B145840067BD1F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		728265B729B1466A0067BD1F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		72AD8F8829A913AE00C2EB21 /* AuthenticationFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthenticationFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AD8F8B29A913AE00C2EB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72AD8F8D29A913AE00C2EB21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		72AD8FA829A91B2A00C2EB21 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		72AD8FAA29A91B3F00C2EB21 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		72B58B9729B13DF9003D7EEA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		72D6459129B16C7E00BD121A /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		728265B929B147400067BD1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72D6459129B16C7E00BD121A /* LoginUserRequest.swift */,
+				728265B729B1466A0067BD1F /* RegisterUserRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		72AD8F7F29A913AE00C2EB21 = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				72AD8F9129A913AE00C2EB21 /* Main.storyboard */,
+				728265B529B145840067BD1F /* AuthService.swift */,
 				72B58B9929B13E2B003D7EEA /* View Controllers */,
+				728265B929B147400067BD1F /* Models */,
 				72B58B9A29B13E53003D7EEA /* Supporting */,
 				72AD8F9929A913AF00C2EB21 /* Info.plist */,
 				72AD8F9F29A9159D00C2EB21 /* GoogleService-Info.plist */,
@@ -183,11 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				72AD8FA929A91B2A00C2EB21 /* RegisterViewController.swift in Sources */,
+				728265B829B1466A0067BD1F /* RegisterUserRequest.swift in Sources */,
 				72AD8FAB29A91B3F00C2EB21 /* ForgotPasswordViewController.swift in Sources */,
 				72AD8F8C29A913AE00C2EB21 /* AppDelegate.swift in Sources */,
 				72AD8FA729A91B1900C2EB21 /* SignInViewController.swift in Sources */,
+				72D6459229B16C7E00BD121A /* LoginUserRequest.swift in Sources */,
 				72AD8F8E29A913AE00C2EB21 /* SceneDelegate.swift in Sources */,
 				72B58B9829B13DF9003D7EEA /* HomeViewController.swift in Sources */,
+				728265B629B145840067BD1F /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +366,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MindyDouglas.AuthenticationFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mindydaesy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -373,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MindyDouglas.AuthenticationFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mindydaesy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
