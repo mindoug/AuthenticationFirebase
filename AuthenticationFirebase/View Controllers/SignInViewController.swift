@@ -46,7 +46,7 @@ class SignInViewController: UIViewController {
     func validateFields() -> Bool {
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             messageLabel.text = "All fields need to be filled in."
-            return false
+            return false //updated this
         }
         return true
     }
