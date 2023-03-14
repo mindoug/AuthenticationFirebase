@@ -51,7 +51,7 @@ class SignInViewController: UIViewController {
         return true
     }
 
-
+//when button is pressed
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         
         let validated = validateFields()
