@@ -24,6 +24,7 @@ class ForgotPasswordViewController: UIViewController {
 
    
     @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
+        
     }
     
 }

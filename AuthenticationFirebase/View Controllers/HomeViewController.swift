@@ -21,7 +21,12 @@ class HomeViewController: UIViewController {
         AuthService.shared.signOut { [weak self] error in
             guard let self = self else { return }
             if error == nil {
-                self.performSegue(withIdentifier: "signedout", sender: self)
+                guard let signInVC = self.storyboard?.instantiateViewController(identifier: "SignIn") as?
+                        SignInViewController else {
+                    fatalError("error while creating SignInController")
+                }
+        //        signInVC.myData = "hello"
+                self.navigationController?.pushViewController(signInVC, animated: true)
             }
         }
     }

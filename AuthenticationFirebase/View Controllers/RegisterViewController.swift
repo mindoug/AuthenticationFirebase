@@ -98,7 +98,7 @@ class RegisterViewController: UIViewController {
                     print(err.localizedDescription)
                 }
             } else {
-                self.performSegue(withIdentifier: "registered", sender: self)
+//                self.performSegue(withIdentifier: "registered", sender: self)
             }
         }
     }
@@ -108,10 +108,22 @@ class RegisterViewController: UIViewController {
         let validated = validateFields()
         if validated {
             registerUser()
+            guard let homeVC = storyboard?.instantiateViewController(identifier: "Home") as?
+                    HomeViewController else {
+                fatalError("error while creating HomeViewController")
+            }
+    //        homeVC.myData = "hello"
+            navigationController?.pushViewController(homeVC, animated: true)
             }
         }
     
     @IBAction func returnToSignIn(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        guard let signInVC = storyboard?.instantiateViewController(identifier: "SignIn") as?
+                SignInViewController else {
+            fatalError("error while creating SignInViewController")
+        }
+//        signInVC.myData = "hello"
+        navigationController?.pushViewController(signInVC, animated: true)
+     
     }
 }
